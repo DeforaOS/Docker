@@ -11,7 +11,7 @@ RUN mkdir -p /var/lib/apt/lists/partial && apt-get update \
   gtk-doc-tools
 
 RUN chgrp -R staff /usr/local \
-  && chmod g+ws /usr/local \
+  && chmod -R g+ws /usr/local \
   && adduser user staff
 
 USER user
